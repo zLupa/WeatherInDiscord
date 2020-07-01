@@ -1,0 +1,13 @@
+{
+  "name": "rtc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "better-logging": "^4.3.0",
+    "discord-rpc": "^3.1.1",
+    "dotenv": "^8.2.0",
+    "websocket": "^1.0.31"
+  }
+}
