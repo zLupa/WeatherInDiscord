@@ -1,10 +1,12 @@
-require("dotenv").config();
-require("better-logging")(console);
-const config = require("./config.json");
+const path = require("path");
+const config = require("../config.json");
 const discordRPC = require("discord-rpc");
-const clientId = "630919052423856170";
+const clientId = "728036166988726343";
 const axios = require("axios").default;
-var URL = `http://api.openweathermap.org/data/2.5/weather?q=${config.city}&units=metric&lang=pt&APPID=${process.env.API_KEY}`;
+require("better-logging")(console);
+require("dotenv").config(path.join('..','.env'))
+
+const URL = `http://api.openweathermap.org/data/2.5/weather?q=${config.city}&units=metric&lang=en&APPID=${process.env.API_KEY}`;
 
 const startTimestamp = new Date();
 
@@ -15,11 +17,11 @@ const rpc = new discordRPC.Client({ transport: "ipc" });
 function setActivity(description, temperature, icon) {
   rpc
     .setActivity({
-      details: description,
-      state: `Temperatura é ${temperature}°C`,
+      details: `Weather in ${config.city} is ${description}`,
+      state: `Temperature is ${temperature}°C`,
       startTimestamp,
       largeImageKey: icon,
-      largeImageText: "Programa feito em nodeJS por zLupim.",
+      largeImageText: "Program made by zLupim in NodeJS.",
       instance: false,
     })
     console.info("The activity has sent successfully, see your Profile in Discord!")

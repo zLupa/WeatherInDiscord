@@ -1,1 +1,7 @@
+# Node things
 node_modules/
+package-lock.json
+
+# Yarn things
+yarn-error.log
+yarn.lock
