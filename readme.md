@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Welcome to WeatherInDiscord 👋</h1>
+<h1 align="center">Welcome to WeatherInDiscord 👋</h1>
 
 <p> Set the weather of any City in your Discord Rich Presence!</p>
 
